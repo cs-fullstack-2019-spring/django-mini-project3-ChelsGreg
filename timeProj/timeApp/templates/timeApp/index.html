@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teachers</title>
+</head>
+<body>
+
+<h1>Teacher List</h1>
+<p>TEACHERS: Select your name to submit new time card.</p>
+<p><a href="{% url 'newTeacher' %}"> New Hire Time Entry</a></p>
+
+<hr/>
+
+{% for teacher in allTeachers %}
+    <p>Teacher: <a href="{% url 'teacherInfo' teacher.id %}">{{ teacher.teachName }}</a>
+    <p>Subject: {{ teacher.subject }}</p>
+    <p>School: <a href="{% url 'schoolHours' teacher.id %}">{{ teacher.school }}</a></p>
+    <p><a href="{% url 'edit' teacher.id %}">Edit</a></p>
+    <p><a href="{% url 'delete' teacher.id %}">Delete</a></p>
+
+
+<hr/>
+{% endfor %}
+
+
+</body>
+</html>
