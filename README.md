@@ -1,3 +1,6 @@
+### POINTS: 2+
+### KEY: Well done on the filters!
+
 # Mini-Project Django
 
 THIS IS A SOLO PROJECT.
